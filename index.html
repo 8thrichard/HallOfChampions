@@ -14,17 +14,23 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Hall Of<strong> Champions</strong></a></h1>
-						<nav>
-							<ul>
-                                <li><a href="/pictures.html" >Pictures</a></li>
-                                <li><a href="/videos.html" >Videos</a></li>
-                                <li><a href="/rosters.html" >Current Rosters</a></li>
-								<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
-							</ul>
-						</nav>
-					</header>
+                <header id="header">
+                    <h1><a href="index.html">Hall Of<strong> Champions</strong></a></h1>
+                    
+                    <!-- Hamburger Button -->
+                    <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+                    
+                    <!-- Navigation Links -->
+                    <nav id="nav-menu">
+                        <ul>
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/videos.html">Current project</a></li>
+                            <li><a href="/rosters.html">Current Rosters</a></li>
+                            <li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                
 
 				<!-- Search Bar -->
 				<div id="search-container">
@@ -191,6 +197,13 @@
                     }
                 });
             });
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.querySelector('ul').classList.toggle('show');
+        });
         </script>        
 	</body>
 </html>
